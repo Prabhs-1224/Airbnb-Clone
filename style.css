@@ -1,0 +1,389 @@
+/* Import a refined version of Playfair Display and a complementary sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif; /* More readable primary font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.7; /* Improved line height for readability */
+    color: #333;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased; /* Better text rendering for macOS */
+    -moz-osx-font-smoothing: grayscale; /* Better text rendering for Firefox */
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif; /* Elegant serif for headings and logo */
+    font-weight: 700; /* More pronounced bold weight */
+    line-height: 1.2;
+    color: #222;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+}
+
+h3 {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+header {
+    background-color: #fff;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08); /* Slightly more pronounced shadow */
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #ff5a5f;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #e44d52;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.75em; /* Increased spacing */
+}
+
+nav ul li a {
+    color: #555;
+    font-weight: 600; /* Semi-bold for navigation links */
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.user-actions button {
+    margin-left: 1.25em;
+    padding: 0.9em 1.6em; /* Adjusted padding */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* More rounded buttons */
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.user-actions button:hover {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+.hero {
+    background-image: url('https://via.placeholder.com/1200x400/f08080/ffffff?Text=Hero+Image');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 120px 0; /* Increased padding */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Slightly darker overlay */
+}
+
+.hero-content {
+    max-width: 900px; /* Wider content area */
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1.2s ease-out 0.3s; /* Adjusted animation timing */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* More pronounced text shadow */
+    font-weight: 700;
+    font-style: italic; /* Added italic style for elegance */
+}
+
+.search-bar {
+    display: flex;
+    max-width: 600px; /* Wider search bar */
+    margin: 3em auto;
+    border-radius: 10px; /* More rounded */
+    overflow: hidden;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1); /* More noticeable shadow */
+}
+
+.search-bar input[type="text"] {
+    flex-grow: 1;
+    padding: 1.4em; /* Increased padding */
+    border: none;
+    font-size: 1.1em;
+    font-family: 'Open Sans', sans-serif; /* Ensure consistent font */
+    font-weight: 400;
+}
+
+.search-bar button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 1.4em 2em; /* Increased padding */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Added transform */
+}
+
+.search-bar button:hover {
+    background-color: #e44d52;
+    transform: scale(1.03); /* Subtle scale on hover */
+}
+
+.featured-stays {
+    padding: 60px 32px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.featured-stays h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.75em;
+}
+
+.stays-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Wider cards */
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.stay-card {
+    border: 1px solid #ddd;
+    border-radius: 12px; /* More rounded */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* More noticeable shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.stay-card:hover {
+    transform: translateY(-8px); /* More pronounced lift */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); /* Stronger shadow on hover */
+}
+
+.stay-card img {
+    width: 100%;
+    display: block;
+    height: 240px; /* Taller images */
+    object-fit: cover;
+}
+
+.stay-card h3, .stay-card p, .stay-card a {
+    padding: 1.2em 1.5em;
+    margin-bottom: 0.8em;
+    text-align: left;
+    color: #444;
+}
+
+.stay-card h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.stay-card p {
+    font-size: 1em;
+    color: #777;
+    line-height: 1.5;
+}
+
+.stay-card a {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 0.7em 1.4em;
+    text-decoration: none;
+    border-radius: 8px; /* More rounded */
+    margin: 1.2em 1.5em;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Added transform */
+}
+
+.stay-card a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Subtle scale on hover */
+}
+
+.listing-details {
+    padding: 60px 32px;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr; /* More emphasis on image */
+    gap: 4em;
+    max-width: 1200px; /* Wider max width */
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 12px; /* More rounded */
+    margin-bottom: 2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.small-images {
+    display: flex;
+    gap: 1em;
+}
+
+.small-images img {
+    width: calc(33.33% - 1em);
+    height: 140px; /* Taller thumbnails */
+    object-fit: cover;
+    border-radius: 8px; /* More rounded */
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Added shadow */
+}
+
+.small-images img:hover {
+    opacity: 1;
+    transform: scale(1.08); /* More noticeable scale */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Added shadow on hover */
+}
+
+.details h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.8em;
+    font-weight: 700;
+}
+
+.details .location {
+    color: #777;
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+}
+
+.details .rating {
+    color: #ffc107;
+    margin-bottom: 1.5em;
+    font-size: 1.1em;
+}
+
+.details .rating .star {
+    margin-right: 0.4em;
+}
+
+.details .amenities {
+    margin-bottom: 2.5em;
+}
+
+.details .amenities h3 {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+
+.details .amenities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.details .amenities li {
+    margin-bottom: 0.7em;
+    font-size: 1em;
+    color: #666;
+}
+
+.details .booking {
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 12px; /* More rounded */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.details .booking h3 {
+    font-size: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+.details .booking .price {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+    color: #444;
+}
+
+.details .booking .price span {
+    font-size: 2.2em;
+}
+
+.details .booking .book-button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 1.2em 2em;
+    border-radius: 8px; /* More rounded */
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Added shadow */
+}
+
+.details .booking .book-button:hover {
+    background-color: #e44d52;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Added shadow on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 32px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+    margin-top: 60px;
+    color: #777;
+    font-size: 0.9em;
+}
